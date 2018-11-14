@@ -3,11 +3,10 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = ""
-		versionCode=""
-		version   = "">
+		versionCode="1.0.0"
+		version   = "1.0.0">
 		<name>Yakkalc		</name>
-		<description>La calculadora que siempre quize tener:
-•	Calculadora
+		<description>•	Calculadora
 •	Conversiones
 o	Distancia
 o	Masa
@@ -25,57 +24,6 @@ o	Inversa
 o	Compuesta
 •	Notas
 o	Permite guardar notas de forma local		</description>
-		<author href="" email="">Hugo Chávez Gómez		</author>
-		<feature name="http://api.phonegap.com/1.0/battery" />
-		<feature name="http://api.phonegap.com/1.0/camera" />
-		<feature name="http://api.phonegap.com/1.0/contacts" />
-		<feature name="http://api.phonegap.com/1.0/file" />
-		<feature name="http://api.phonegap.com/1.0/geolocation" />
-		<feature name="http://api.phonegap.com/1.0/media" />
-		<feature name="http://api.phonegap.com/1.0/network" />
-		<feature name="http://api.phonegap.com/1.0/notification" />
-		<preference name="phonegap-version" value="cli-6.3.0" />
-		<preference name="android-build-tool" value="gradle" />
-		<preference name="orientation" value="default" />
-		<preference name="fullscreen" value="true" />
-		<preference name="target-device" value="universal" />
-		<preference name="webviewbounce" value="true" />
-		<preference name="prerendered-icon" value="false" />
-		<preference name="stay-in-webview" value="true" />
-		<preference name="ios-statusbarstyle" value="default" />
-		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="true" />
-		<preference name="show-splash-screen-spinner" value="true" />
-		<preference name="auto-hide-splash-screen" value="true" />
-		<preference name="FadeSplashScreen " value="true" />
-		<preference name="EnableViewportScale" value="false" />
-		<preference name="MediaPlaybackRequiresUserAction" value="false" />
-		<preference name="AllowInlineMediaPlayback" value="true" />
-		<preference name="BackupWebStorage" value="none" />
-		<preference name="TopActivityIndicator" value="white" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
-		<preference name="KeyboardShrinksView " value="true" />
-		<preference name="HideKeyboardFormAccessoryBar" value="true" />
-		<preference name="SuppressesIncrementalRendering" value="false" />
-		<preference name="windows-identity-name" value="" />
-		<preference name="android-minSdkVersion" value="0" />
-		<preference name="android-installLocation" value="auto" />
-		<preference name="SplashScreenDelay" value="2000" />
-		<preference name="ErrorUrl" value="null" />
-		<preference name="BackgroundColor" value="0x000000" />
-		<preference name="DisallowOverscroll" value="true" />
-		<preference name="LoadingDialog" value="Yakkalc,La calculadora que siempre quise tener" />
-		<preference name="LoadUrlTimeoutValue" value="null" />
-		<platform name="ios">
-		<icon src="file://C:\Users\hugo_\Dropbox\Programacion\JavaScript\Yakalc\yakkalc60x60.PNG" width="60" height="60" />
-		<icon src="file://C:\Users\hugo_\Dropbox\Programacion\JavaScript\Yakalc\yakkalc120x120.PNG" width="120" height="120" />
-		<icon src="file://C:\Users\hugo_\Dropbox\Programacion\JavaScript\Yakalc\yakkalc180x180.PNG" width="180" height="180" />
-		<icon src="file://C:\Users\hugo_\Dropbox\Programacion\JavaScript\Yakalc\yakkalc76x76.PNG" width="76" height="76" />
-		<icon src="file://C:\Users\hugo_\Dropbox\Programacion\JavaScript\Yakalc\yakkalc152x152.PNG" width="152" height="152" />
-		</platform>
-		<platform name="android">
-		</platform>
-		<platform name="winphone">
-		</platform>
-		 <icon src="icon.png" />
-		</widget>
+	<author href="" email="chavezh@gmail.com">Hugo Chávez		</author>
+    <icon src="yakkalc180x180.png" />
+	</widget>
