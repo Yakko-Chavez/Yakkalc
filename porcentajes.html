@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script><!Jquery >
+<script type="text/javascript" src="js/bootstrap.min.js"> </script><!bootstrap 4 >
+<script type="text/javascript" src="porcent.js"> </script><!las funciones de esta página >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    body{
+        background-color: black;
+        COLOR: White;
+    }
+    div.Titulos{
+        COLOR: White;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        //font-size:3vw;
+        text-align: Center;        
+        }
+    .form-control{
+        //background-color: black;
+        background-color: #333333;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        text-align: Center; 
+        
+    }
+    #p3, #p6, #p9, #p12{
+        background-color: black;
+
+    }
+</style>
+<html>
+
+<head>
+        <title>Yakkalc la calculadora que siempre quise</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand mb-0 h1">Yakkalc</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="convert.html">Conversiones</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="porcentajes.html">Porcentajes</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="reglade3.html">Regla de tres</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="notas.html">Notas rápidas</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="acercade.html">Acerca de ...</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+
+<form name="por">
+    <div class="container-fluid " >
+        <!****************************************** Porcentaje Básico  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>¿Cuál es el...?</p> </div>
+            <div class="col-3 Titulos"> <p onclick="Mensaje('¿Cual es el 50 % de 100? Respuesta = 50')" id="Result"><br>Ejemplo</p> </div>
+        </div>    
+        <div class="row  container-fluid " align="center">
+            <div class="col-4  "> <p id="Result">%<input  onchange="porcentaje1()"   id = "p1" type="number" class="form-control"  ></p> </div>
+            <div class="col-4  "> <p id="Result">De   <input  onchange="porcentaje1()"   id = "p2" type="number" class="form-control"  ></p> </div>
+            <div class="col-4  "> <p id="Result">Respuesta:  <input  onchange="porcentaje1()"   id = "p3" type="number" class="form-control" disabled ></p> </div>            
+        </div>
+        <hr>
+        <!****************************************** Porcentaje Opción 2  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>Si el 100% es...</p> </div>
+            <div class="col-3 Titulos"> <p onclick="Mensaje('¿Si el 100% es 50 su 50% es? Respuesta = 25')" id="Result"><br>Ejemplo</p> </div>
+        </div>    
+        <div class="row  container-fluid " align="center">
+            <div class="col-4  "> <p id="Result"> <br><input  onchange="porcentaje2()"           id = "p4" type="number" class="form-control"  > </p> </div>
+            <div class="col-4  "> <p id="Result">Su <input  onchange="porcentaje2()"  id = "p5" type="number" class="form-control"  >% es...</p> </div>
+            <div class="col-4  "> <p id="Result">Respuesta:  <input  onchange="porcentaje2()"    id = "p6" type="number" class="form-control" disabled  ></p> </div>            
+        </div>
+        <hr>
+        <!****************************************** Porcentaje Opción 3  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>¿Cuál es el 100%?</p> </div>
+            <div class="col-3 Titulos"> <p onclick="Mensaje('¿Cuál es el 100% si 10 es el 50%? Respuesta = 20 ')" id="Result"><br>Ejemplo</p> </div>
+        </div>    
+        <div class="row  container-fluid " align="center">
+            <div class="col-4  "> <p id="Result">Si <input  onchange="porcentaje3()"          id = "p7" type="number" class="form-control"  > </p> </div>
+            <div class="col-4  "> <p id="Result">Es el  <input  onchange="porcentaje3()"      id = "p8" type="number" class="form-control"  >%</p> </div>
+            <div class="col-4  "> <p id="Result">Respuesta:  <input  onchange="porcentaje3()" id = "p9" type="number" class="form-control" disabled ></p> </div>            
+        </div>
+        <hr>
+        <!****************************************** Porcentaje Opción 4  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>¿Qué % es ?</p> </div>
+            <div class="col-3 Titulos"> <p onclick="Mensaje('¿Que % es 30 de 60? Respuesta = 50% ')" id="Result"><br>Ejemplo</p> </div>
+        </div>    
+        <div class="row  container-fluid " align="center">
+            <div class="col-4  "> <p id="Result"> <BR>          <input  onchange="porcentaje4()"          id = "p10" type="number" class="form-control"  > </p> </div>
+            <div class="col-4  "> <p id="Result">De:        <input  onchange="porcentaje4()"      id = "p11" type="number" class="form-control"  ></p> </div>
+            <div class="col-4  "> <p id="Result">Respuesta: <input  onchange="porcentaje4()" id = "p12" type="number" class="form-control" disabled >%</p> </div>            
+        </div>
+        <hr>
+
+</div>
+</form>
+</body>
+</html>    

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script><!Jquery >
+<script type="text/javascript" src="js/bootstrap.min.js"> </script><!bootstrap 4 >
+<script type="text/javascript" src="js/ckeditor.js"> </script><!Editor java script >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    body{
+        background-color: black;
+        //COLOR: White;
+    }
+    .ck.ck-editor {
+        color: black;
+        background-color: black;
+    }
+
+</style>
+<html>
+
+<head>
+        <title>Yakkalc la calculadora que siempre quise</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand mb-0 h1">Yakkalc</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="convert.html">Conversiones</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="porcentajes.html">Porcentajes</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="reglade3.html">Regla de tres</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="notas.html">Notas rápidas</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="acercade.html">Acerca de ...</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+<div class="row container-fluid" align="center" >
+        <div class="col-4"><button  onclick ="guarda()"    type="button" class="btn btn-dark"> Guardar</button> </div>
+        <div class="col-4"><button  onclick ="recupera()"  type="button" class="btn btn-dark"> Recuperar</button> </div>
+        <div class="col-4"><button  onclick ="limpiar()"   type="button" class="btn btn-dark"> Limpiar</button> </div>
+</div>
+<textarea name="content" id="editor">
+
+</textarea>
+
+</body>
+</html>
+<script>
+    window.onload = recupera;// en el cargado de pagina recuperamos cualquier información guardada
+    let editor;// definimos la variable para poder accesarla globalmente
+    ClassicEditor//creamos el editor
+        .create( document.querySelector( '#editor' ), {
+            // solo me interesan estas features
+            toolbar: ['heading','undo', 'redo','bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
+            heading: {// cambio de conceptos a español
+                options: [
+                    { model: 'paragraph', title: 'Texto Normal', class: 'ck-heading_paragraph' },
+                    { model: 'heading1', view: 'h1', title: 'Título', class: 'ck-heading_heading1' },
+                    { model: 'heading2', view: 'h2', title: 'Subtítulo', class: 'ck-heading_heading2' }
+                ]}
+        
+        } )
+        .then( newEditor => {
+            editor = newEditor;
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+    
+
+
+ function guarda(){
+     // obtenemos el contenido del editor en html
+    data = editor.getData();
+    // si regresa undefined el celular no permite localstorage
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("Notas", data);
+    } else {
+       alert ("Perdón tu celular no permite el guardado de notas")
+    }
+    
+ }
+
+ function recupera(){
+  // recuperamos la infromación del LocalStorage  
+ var recupera = localStorage.Notas;
+ //si no hya nada devuelve undefined
+   if (recupera == 'undefined'){
+    recupera='';//en ese caso limpiamos la variable
+   }
+   editor.setData(recupera);//cargamos al editor el contenido
+ }
+    
+ function limpiar(){
+    editor.setData('');// limpiamos el contenido del editor
+ }
+</script>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script><!Jquery >
+<script type="text/javascript" src="js/bootstrap.min.js"> </script><!bootstrap 4 >
+<script type="text/javascript" src="convert.js"> </script><!las funciones de esta página >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    body{
+        background-color: black;
+        COLOR: White;
+    }
+    div.Titulos{
+        COLOR: White;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        //font-size:3vw;
+        text-align: Center;        
+        }
+    .form-control{
+        //background-color: black;
+        background-color: #333333;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        text-align: Center;        
+    }
+
+</style>
+<html>
+
+<head>
+        <title>Yakkalc la calculadora que siempre quise</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand mb-0 h1">Yakkalc</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="convert.html">Conversiones</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="porcentajes.html">Porcentajes</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="reglade3.html">Regla de tres</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="notas.html">Notas rápidas</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="acercade.html">Acerca de ...</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+<form name="conv">
+<div class="container-fluid " >
+    <!****************************************** Distancias  *************************************>
+    <div class="row  container-fluid " align="center">
+        <div class="col-12  Titulos"> <p id="Result"><br>Distancias</p> </div>
+    </div>
+    
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Centímetros<input onchange="centimetros()" id = "Di1" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Métros     <input onchange="metros()"     id = "Di2" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Kilómetros <input onchange="kilometros()" id = "Di3" type="number" class="form-control" ></div>
+    </div>
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Millas<input  onchange="millas()" id = "Di4" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Yardas<input  onchange="yardas()" id = "Di5" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Pies<input    onchange="pies()" id =   "Di6" type="number" class="form-control" ></div>
+    </div>
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Pulgadas<input  onchange ="pulgadas()"    id = "Di7" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Milímetros<input onchange ="milimetros()" id = "Di8" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Nanómetros<input onchange="nanometros()" id = "Di9" type="number" class="form-control" ></div>
+    </div>
+    <hr>
+    <!****************************************** Masas  *************************************>
+    <div class="row  container-fluid " align="center">
+        <div class="col-12  Titulos"> <p id="Result"><br>Masas</p> </div>
+    </div>
+    
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Gramos<input  onchange = "gramos()" id = "Ma1" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Kilos<input   onchange="kilos()"   id = "Ma2" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Toneladas<input  onchange ="toneladas()" id = "Ma3" type="number" class="form-control" ></div>
+    </div>
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Miligramos<input onchange ="miligramos()" id = "Ma4" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Onzas <input onchange = "onzas()"  id = "Ma5" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Libras<input  onchange= "libras()"   id = "Ma6" type="number" class="form-control" ></div>
+    </div>
+    <hr>
+    <!****************************************** Temperatura  *************************************>
+    <div class="row  container-fluid " align="center">
+        <div class="col-12  Titulos"> <p id="Result"><br>Temperaturas</p> </div>
+    </div>
+    
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Celsius    <input onchange="celsius()"        id = "Te1" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Fahrenheit <input onchange="fahrenheit()"     id = "Te2" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Kelvin     <input onchange="kelvin()"         id = "Te3" type="number" class="form-control" ></div>
+    </div>
+    <hr>
+    <!****************************************** Volumen  *************************************>
+    <div class="row  container-fluid " align="center">
+        <div class="col-12  Titulos"> <p id="Result"><br>Volumen</p> </div>
+    </div>
+    
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Mililitros<input  onchange="mililitros()"   id = "Vo1" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Litros    <input  onchange="litros()"       id = "Vo2" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Galónes   <input  onchange="galones()"   id = "Vo3" type="number" class="form-control" ></div>
+    </div>
+    <div class="row  container-fluid " align="center">
+            <div class="col-4  Result">Tazas       <input onchange="tazas()"       id = "Vo4" type="number" class="form-control"  ></div>
+            <div class="col-4  Result">Cucharadas  <input onchange="cucharadas()"       id = "Vo5" type="number" class="form-control" ></div>
+            <div class="col-4  Result">Cucharaditas<input onchange ="cucharaditas()"       id = "Vo6" type="number" class="form-control" ></div>
+        </div>
+    <hr>
+    <!****************************************** Velocidad  *************************************>
+    <div class="row  container-fluid " align="center">
+        <div class="col-12  Titulos"> <p id="Result"><br>Velocidad</p> </div>
+    </div>
+    
+    <div class="row  container-fluid " align="center">
+        <div class="col-4  Result">Metros x Segundo <input  onchange="metrosxseg()"   id = "Ve1" type="number" class="form-control"  ></div>
+        <div class="col-4  Result">Kilómetros x Hora<input  onchange="kmxhora()" id = "Ve2" type="number" class="form-control" ></div>
+        <div class="col-4  Result">Millas por Hora  <input  onchange="millxhora()"  id = "Ve3" type="number" class="form-control" ></div>
+    </div>
+    <hr>
+</div>
+</form>
+</body>
+</html>

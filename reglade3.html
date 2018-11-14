@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script><!Jquery >
+<script type="text/javascript" src="js/bootstrap.min.js"> </script><!bootstrap 4 >
+<script type="text/javascript" src="reglade3.js"> </script><!las funciones de esta página >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    body{
+        background-color: black;
+        COLOR: White;
+    }
+    div.Titulos{
+        COLOR: White;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        //font-size:3vw;
+        text-align: Center;        
+        }
+    .form-control{
+        //background-color: black;
+        background-color: #333333;
+        border-radius: 10px;
+        border: 1px solid White;
+        padding: 1px; 
+        text-align: Center; 
+        
+    }
+    #s4, #s8, #s14{
+        background-color: black;
+        
+
+    }
+</style>
+<html>
+
+<head>
+        <title>Yakkalc la calculadora que siempre quise</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand mb-0 h1">Yakkalc</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Calculadora<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="convert.html">Conversiones</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="porcentajes.html">Porcentajes</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="reglade3.html">Regla de tres</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="notas.html">Notas rápidas</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link " href="acercade.html">Acerca de ...</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+
+<form name="por">
+    <div class="container-fluid " >
+        <!****************************************** regla de 3 simple o directa  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>Regla de 3 Directa<br> (Aumenta Proporcionalmente)</p> </div>
+            <div class="col-3 Titulos"> <p onclick="mensaje('1 dolar es a 20 pesos como 3 dolares a ... 60 pesos')" id="Result"><br>Ejemplo</p> </div>
+        </div>            
+        <div class="row  container-fluid " align="center">
+            <div class="col-6  "> <p id="Result">Esta cantidad es  <input  onchange="simple()"   id = "s1" type="number" class="form-control"  > </p> </div>
+            <div class="col-6  "> <p id="Result"> a:<input         onchange="simple()"   id = "s2" type="number" class="form-control"  ></p> </div>            
+        </div>
+        <div class="row  container-fluid " align="center">
+            <div class="col-6  "> <p id="Result">Como   <input  onchange="simple()"   id = "s3" type="number" class="form-control"  ></p> </div>
+            <div class="col-6  "> <p id="Result"> a....<input                        id = "s4" type="number" class="form-control" disabled ></p> </div>            
+        </div>
+        <hr>
+        <!****************************************** regla de 3 simple inversa  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>Regla de 3 Inversa<br> (Disminuye Proporcionalmente)</p> </div>
+            <div class="col-3  Titulos"> <p onclick="mensaje('si a 2 km/h me hago 30 minutos a 10 km/h me hago ...6 ')" id="Result"><br>Ejemplo</p> </div>
+        </div>            
+        <div class="row  container-fluid " align="center">
+            <div class="col-6"> <p id="Result">Esta cantidad es<input  onchange="inversa()"   id = "s5" type="number" class="form-control"  > </p> </div>
+            <div class="col-6"> <p id="Result"> a:<input               onchange="inversa()"   id = "s6" type="number" class="form-control"  ></p> </div>            
+        </div>
+        <div class="row  container-fluid " align="center">
+            <div class="col-6"> <p id="Result">Como <input  onchange="inversa()"   id = "s7" type="number" class="form-control"  ></p> </div>
+            <div class="col-6"> <p id="Result"> a....           <input id = "s8" type="number" class="form-control" disabled ></p> </div>            
+        </div>
+        <!****************************************** regla de 3 Compuesta  *************************************>
+        <div class="row  container-fluid " align="center">
+            <div class="col-9  Titulos"> <p id="Result"><br>Regla de 3 Compuesta<br> (5 variables)</p> </div>
+            <div class="col-3  Titulos"> <p onclick="mensaje('si 5 botellas de 2 litros pesan 10 kilos cuanto pesan 2 botellas de 3 litros... 6 kilos')" id="Result"><br>Ejemplo</p> </div>
+        </div>            
+        <div class="row  container-fluid " align="center">
+            <div class="col-4"> <p id="Result">Si..             <input  onchange="compuesta()"   id = "s9" type="number" class="form-control"  > </p> </div>
+            <div class="col-4"> <p id="Result">Con..            <input  onchange="compuesta()"   id = "s10" type="number" class="form-control"  > </p> </div>
+            <div class="col-4"> <p id="Result">Me da..          <input  onchange="compuesta()"   id = "s11" type="number" class="form-control"  > </p> </div>
+        </div>
+        <div class="row  container-fluid " align="center">
+            <div class="col-4"> <p id="Result">Entonces..             <input  onchange="compuesta()"   id = "s12" type="number" class="form-control"  > </p> </div>
+            <div class="col-4"> <p id="Result">Con..                  <input  onchange="compuesta()"   id = "s13" type="number" class="form-control"  > </p> </div>
+            <div class="col-4"> <p id="Result">Me da..          <input  onchange="compuesta()"   id = "s14" type="number" class="form-control" disabled  > </p> </div>
+        </div>
+
+    </div>
+</form>
+</body>
+</html>    
