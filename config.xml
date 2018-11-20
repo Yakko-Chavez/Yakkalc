@@ -1,32 +1,33 @@
-	<widget xmlns   = "http://www.w3.org/ns/widgets"
-	 	xmlns:gap   = "http://phonegap.com/ns/1.0"
-		versionCode = "1.0.0"
-		version     =  "1.0.0">
-		<name>Yakkalc		</name>
-		<description>
-		•	Calculadora
-		•	Conversiones
-		o	Distancia
-		o	Masa
-		o	Temperatura
-		o	Volumen
-		o	Velocidad
-		•	Porcentajes
-		o	Simple
-		o	Si el 100% es x cual es su y%?
-		o	Si x es el y% cual es el 100%
-		o	Que % es x de y?
-		•	Regla de 3
-		o	Directa
-		o	Inversa
-		o	Compuesta
-		•	Notas
-		o	Permite guardar notas de forma local	
-		</description>
-	<preference name="Fullscreen" value="true"/> 
-	<preference name="Orientation" value="portrait"/>
-	<preference name="Yakkalc" value="La calculadora que siempre quise"/>	
-	<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
-	<platform name="android" />
-    <icon src="yakkalc180x180.png" />
-	</widget>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+xmlns:gap   = "http://phonegap.com/ns/1.0"
+versionCode = "1.0.0"
+version     =  "1.0.0">
+<name>Yakkalc</name>
+<description>
+<h3> la calculadora que siempre quise tener </h3>
+<li>Calculadora</li>
+<li>Conversiones</li>
+<li>--Distancia</li>
+<li>--Masa</li>
+<li>--Temperatura</li>
+<li>--Volumen</li>
+<li>--Velocidad</li>
+<li>Porcentajes</li>
+<li>--Simple</li>
+<li>--Si el 100% es x cual es su y%?</li>
+<li>--Si x es el y% cual es el 100%</li>
+<li>--Que % es x de y?</li>
+<li>Regla de 3</li>
+<li>--Directa</li>
+<li>--Inversa</li>
+<li>--Compuesta</li>
+<li>Notas</li>
+<li>Permite guardar notas de forma local</li>	
+</description>
+<preference name="Fullscreen" value="true"/> 
+<preference name="Orientation" value="portrait"/>
+<preference name="Yakkalc" value="La calculadora que siempre quise"/>	
+<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
+<platform name="android" />
+<icon src="yakkalc180x180.PNG" />
+</widget>
