@@ -28,5 +28,5 @@
 	<preference name="Yakkalc" value="La calculadora que siempre quise"/>	
 	<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
 	<platform name="android" />
-    <icon src="yakkalc180x180" />
+    <icon src="yakkalc180x180.png" />
 	</widget>
