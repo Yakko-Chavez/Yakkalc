@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		versionCode="1.0.0"
 		version   = "1.0.0">
 		<name>Yakkalc		</name>
-		<description>•	Calculadora
+		<description>
+		•	Calculadora
 		•	Conversiones
 		o	Distancia
 		o	Masa
@@ -22,5 +24,6 @@
 		o	Permite guardar notas de forma local	
 		</description>
 	<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
-    <icon src="yakkalc180x180.png" />
+	<platform name="android" />
+    <icon src="yakkalc180x180.png" /></icon>
 	</widget>
