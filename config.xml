@@ -23,7 +23,10 @@
 		•	Notas
 		o	Permite guardar notas de forma local	
 		</description>
+	<preference name="Fullscreen" value="true"/> 
+	<preference name="Orientation" value="portrait"/>
+	<preference name="Yakkalc" value="La calculadora que siempre quise"/>	
 	<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
-	<platform name="android" /></platform>
-    <icon src="yakkalc180x180.png" /></icon>
+	<platform name="android" />
+    <icon src="yakkalc180x180" />
 	</widget>
