@@ -29,5 +29,5 @@ version     =  "1.0.0">
 <preference name="Yakkalc" value="La calculadora que siempre quise"/>	
 <author href="" email="chavezh@gmail.com">Hugo Chávez</author>
 <platform name="android" />
-<icon src="yakkalc180x180.PNG" />
+<icon src="yakkalc.png" />
 </widget>
