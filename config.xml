@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-	<widget xmlns = "http://www.w3.org/ns/widgets"
-		versionCode="1.0.0"
-		version   = "1.0.0">
+	<widget xmlns   = "http://www.w3.org/ns/widgets"
+	 	xmlns:gap   = "http://phonegap.com/ns/1.0"
+		versionCode = "1.0.0"
+		version     =  "1.0.0">
 		<name>Yakkalc		</name>
 		<description>
 		•	Calculadora
@@ -24,6 +24,6 @@
 		o	Permite guardar notas de forma local	
 		</description>
 	<author href="" email="chavezh@gmail.com">Hugo Chávez</author>
-	<platform name="android" />
+	<platform name="android" /></platform>
     <icon src="yakkalc180x180.png" /></icon>
 	</widget>
