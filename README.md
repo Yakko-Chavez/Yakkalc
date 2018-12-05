@@ -9,19 +9,19 @@ Sencilla herramienta  con opciones de :
 •	Calculadora
 •	Conversiones
   o	Distancia
-  o	Masa
+	o Masa
   o	Temperatura
   o	Volumen
   o	Velocidad
 •	Porcentajes
   o	Simple
-  o	Si el 100% es x cual es su y%?
-  o	Si x es el y% cual es el 100%
-  o	Que % es x de y?
+	o	Si el 100% es x cual es su y%?
+	o	Si x es el y% cual es el 100%
+	o	Que % es x de y?
 •	Regla de 3
   o	Directa
-  o	Inversa
-  o	Compuesta
+	o	Inversa
+	o	Compuesta
 •	Notas
   o	Permite guardar notas de forma local
 
