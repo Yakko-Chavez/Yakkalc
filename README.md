@@ -1,5 +1,5 @@
 Yakkalc
-
+<hr>
 La calculadora que siempre quise tener
 
 Programada por: Hugo A. Chávez
