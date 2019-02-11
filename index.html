@@ -15,15 +15,15 @@
             border-radius: 20px;
             //border: 1px solid White;
             padding: 10px; 
-            font-size:8vw;
+            font-size:7vw;
             
     }
     div.Igual {
         COLOR: White;
         border-radius: 25px;
         border: 1px solid White;
-        padding: 20px; 
-        font-size:10vw;
+        padding: 15px; 
+        font-size:8vw;
         font-weight: bold;
 }
     .navbar-toggler{
@@ -34,15 +34,36 @@
     from {background-color:white;}
     to {background-color: black;}
 }
-    div.Result{
+    textarea.form-control {
+        background : black;
         COLOR: White;
         border-radius: 20px;
-        border: 1px solid White;
-        padding: 10px; 
-        font-size:10vw;
+        //border: 1px solid White;
+        //padding: 10px; 
+        font-size:5vw;
         text-align: right;        
         }
-        
+    .form-control[readonly].no-gray {
+           background-color : black;
+    } 
+
+    
+    .btn-link{
+         background-color : black;
+         background : black;
+         COLOR: White;
+         text-decoration: none;//para quitar el azul de liga visitada
+
+    }
+    div.card{
+         background-color : black;
+         background : black;
+         COLOR: White;
+    }
+    .btn:focus, .btn-success:focus{
+       COLOR: White;
+    }
+
 </style>
 <html>
 
@@ -79,12 +100,34 @@
         </ul>
     </div>
 </nav>    
-
+<!**************************Historial********************************>
+<style>
+#Historial{
+	background:green;
+	transition:background 2s ease;
+}
+</style>
+<div class="accordion" id="Historial">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Historial
+        </button>
+      </h5>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#Historial">
+      <div class="card-body" id = "Historia">
+        
+      </div>
+    </div>
+    </div>
+ </div>
+</div>
 
 <div class="container-fluid h-100" >
     <!****************Resultado**********************>
-    <div class="row  container-fluid h-100" align="center">
-        <div class="col-12 h-100 Result"> <p id="Result">0</p> </div>
+    <div class="form-group">
+        <textarea class="form-control no-gray" id="Result" rows = "3" readonly>0</textarea>
     </div>
     <!****************SQRT X**N  X2 CE *********************>
     <div class="row container-fluid  h-100" align="center" >
@@ -153,17 +196,45 @@
 
 <script>
     m1 = 0;//inicializamos la variable m1 con 0
+    //colapsamos el historial que viene abierto por default
+    $('#collapseOne').collapse({
+    toggle: true
+    })
+
+    
+    function Historia(res){
+        hist = document.getElementById("Historia").innerHTML ;
+        hist = hist + res;
+        document.getElementById("Historia").innerHTML = hist;
+    }
+
     function Calculadora(p){
     var res = document.getElementById("Result").innerHTML;
     if (res == '0'){ res = ''};
     switch(p){
+        case '+':// Suma 
+           // res = eval(res);//Evaluamos antes de operar
+            break;
+        case '-':// Resta
+            //res = eval(res);//Evaluamos antes de operar
+            break;
+        case '*':// Multiplicación
+            //res = eval(res);//Evaluamos antes de operar
+            break;
+        case '/':// División
+            //res = eval(res);//Evaluamos antes de operar
+            break;
+
         case 'CE'://Cero borrar
             res = '0';
             p = '';
+            Historia( "Borrado  = 0" + "<br>" );
             break;
         case '=':// Evaluar Resultado
             try{
+                Historia( res );
                 res = eval(res);
+                Historia( "=" + res + "<br>" );
             }catch(e){
                 alert('Error de Expresión');
                 res='';
@@ -172,11 +243,13 @@
             break;
         case 'RC'://Raiz Cuadrada
             res = eval(res);
+            Historia( "Raiz de " + res + "=" );
             p = Math.sqrt(res);
             if ( isNaN( p ) == true ) {
                 alert ('No se puede Obtener la Raiz de '+ res);
                 p = '';
             }
+            Historia( p + "<BR>" );
             res='';
             break;
         case 'PI'://PI
@@ -184,7 +257,9 @@
             break;
         case 'X2'://X Cuadrada
             res = eval(res);
+            Historia( res + "Al cuadrado = " );
             p = res * res;
+            Historia( p + "<BR>" );
             res = '';
             break;
         case 'Rev'://Borra último caracter
@@ -211,10 +286,6 @@
         break;   
     }
     res += p;
-    //no más de 14 caractéres
-    if (res.length > 14){
-        res = res.substring(0, 14);  
-    }
-    document.getElementById("Result").innerHTML = res;    
-}
+    document.getElementById("Result").innerHTML = res;   
+}//del function calculadora
 </script>
